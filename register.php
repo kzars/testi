@@ -1,6 +1,3 @@
-<?php 
-session_start();
-?>
 
 <!DOCTYPE html>
 <html>
@@ -19,22 +16,11 @@ session_start();
 			<div class="col-sm-4 center">
 			</div>
 			<div class="col-sm-4 pull-right">
-				<?php 
-					include 'login.php';
-				?>
-			<a href="logout.php">Logout</a>
-			|
-			<a href="register.php">Register</a>
 			</div>
 		</div>
 		<div class="row row-spaced "></div>
 		<div class="row row-spaced row-gray"></div>
-		<?php 
-		if(!isset($_SESSION["username"])){
-			echo 'not logged in';
-		} else { ?>
-		"<script>window.location = 'http://electic.lv/ttdarbs/Web/'  </script>"
-		<?php header("Location: /ttdarbs/Web/index.html"); }?>
+		<?php include 'registration.php'; ?>
 	</div>
 </body>
 </html>
